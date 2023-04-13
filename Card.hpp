@@ -6,11 +6,19 @@
 #include <vector>
 #include <list>
 
-class Card{
-    
+class Card
+{
+private:
+    int number;
+    char shape;
 
+public:
+    Card(int, char);
+    ~Card();
+    void setNumber(const int);
+    int getNumber() const;
+    void setShape(const char);
+    char getShape() const;
 };
-
-
 
 #endif

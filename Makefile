@@ -1,5 +1,5 @@
-SRC=Card.cpp Main.cpp Table.cpp
-EXE=examen
+SRC=Card.cpp Main.cpp Table.cpp Hand.cpp
+EXE=Poker
 CXX=g++
 CXXFLAGS+=-Wall -Wextra -MMD -g
 LDFLAGS= 
