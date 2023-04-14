@@ -1,1 +1,1 @@
-build/Table.o: Table.cpp Table.hpp Hand.hpp Card.hpp
+build/Table.o: Table.cpp Table.hpp Player.hpp Card.hpp

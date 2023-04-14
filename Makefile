@@ -1,4 +1,4 @@
-SRC=Card.cpp Main.cpp Table.cpp Hand.cpp
+SRC=Card.cpp Main.cpp Table.cpp Player.cpp
 EXE=Poker
 CXX=g++
 CXXFLAGS+=-Wall -Wextra -MMD -g

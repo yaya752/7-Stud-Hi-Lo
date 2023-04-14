@@ -1,5 +1,5 @@
-#ifndef __Hand_hpp__
-#define __Hand_hpp__
+#ifndef __Player_hpp__
+#define __Player_hpp__
 
 // common library
 #include <iostream>
@@ -8,11 +8,12 @@
 #include <list>
 // Objects
 #include "Card.hpp"
-class Hand
+class Player
 {
 private:
-    // cards that everyone can look
+    
     std::string name;
+    // cards that everyone can look
     std::list<Card> rectoCards;
     // only the player can see those cards (the first two and the last one are turned over)
     std::list<Card> allCards;
@@ -22,12 +23,12 @@ private:
     int state = 0; // folds = 1 or play = 0
 
 public:
-    Hand(std::string);
-    ~Hand();
+    Player(std::string,int);
+    ~Player();
     void addRectoCard(const Card);
     void addCard(const Card);
-    std::list<Card> getPlayerRectoHand() const;
-    std::list<Card> getPlayerAllHand() const;
+    std::list<Card> getPlayerRectoPlayer() const;
+    std::list<Card> getPlayerAllPlayer() const;
     void setRateOfWinHupper(const int);
     int getRateOfWinHupper() const;
     void setRateOfWinLower(const int);

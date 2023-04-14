@@ -1,12 +1,13 @@
 #include "Table.hpp"
 #include "Card.hpp"
 #include "Table.hpp"
-#include "Hand.hpp"
+#include "Player.hpp"
 #include "Card.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
+
 
 int main()
 {
@@ -25,17 +26,27 @@ int main()
                 while (ligne.substr(0, 4) == "Seat")
                 {
                     std::string nom = "";
-                    int i = 7;
+                    int i = 8;
+                    int j = 0;
                     while (ligne[i] != ' ')
                     {
                         i++;
                     }
-                    nom = ligne.substr(7,i-1);
-                    //std::cout << nom << std::endl;
-                    Hand * player = new Hand(nom);
+                    nom = ligne.substr(8,i-8);
+                    i+=2;
+                    j = i;
+                    while (ligne[j] != ' ')
+                    {
+                        j++;
+                    }
+                    int chips = stoi(ligne.substr(i,j-i));
+                    std::cout << ligne.substr(i,j-i) << std::endl;
+                    Player * player = new Player(nom,chips);
                     t.addPlayer(player);
                     getline(fichier, ligne);
+                    //affichage des joeurs et le nombre de leur jetons
                 }
+                
                 t.getNames(ss);
                 std::cout << ss.str() << std::endl;
             }
